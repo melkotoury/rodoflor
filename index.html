@@ -18,6 +18,7 @@
     <title>Rodoflor | Donato Flower Farms</title>
     <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -29,6 +30,7 @@
     <![endif]-->
 
     <script src="assets/js/modernizr.custom.js"></script>
+
 </head>
 
 
@@ -137,7 +139,7 @@
                                        
 
                     <li >
-                        <a href="about-us.html" >About Rodoflor</a>
+                        <a href="about-us.html" >About Us</a>
                      
                     </li>
 
@@ -408,22 +410,52 @@
         </div>
 
 
-        <section class="ct-mediaSection ct-u-marginBottom90" data-stellar-background-ratio="0.2" data-height="340" data-type="parallax" data-bg-image="assets/images/demo-content/parallaxBG.jpg" data-bg-image-mobile="assets/images/demo-content/parallaxBG.jpg">
-            <div class="ct-mediaSection-inner">
-                <div class="container">
-                    <div class="ct-newsletter">
-                            <header>
-                                
-                            </header>
+
+<section class="fun-facts">
 
 
-                    
 
-
-                    </div>
-                </div><!-- /container -->
+    <div class="container">
+        <div class="stat">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="milestone-counter">
+                    <i class="fa fa-user fa-3x"></i>
+                    <span class="stat-count highlight">122</span>
+                    <div class="milestone-details">Happy Customers</div>
+                </div>
             </div>
-        </section>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="milestone-counter">
+                    <i class="fa fa-coffee fa-3x"></i>
+                    <span class="stat-count highlight">4226</span>
+                    <div class="milestone-details">Ordered Coffee's</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="milestone-counter">
+                    <i class="fa fa-trophy fa-3x"></i>
+                    <span class="stat-count highlight">14</span>
+                    <div class="milestone-details">Awards Win</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="milestone-counter">
+                    <i class="fa fa-camera fa-3x"></i>
+                    <span class="stat-count highlight">232</span>
+                    <div class="milestone-details">Photos Taken</div>
+                </div>
+            </div>
+        </div><!-- stat -->
+    </div>
+
+
+</section>
+
+
+
+
+
+
 
 
  <!--Our Services-->
@@ -500,7 +532,7 @@
                 <h3 class="ct-headline text-left">
         <span class="ct-headline-container ct-u-colorMotive">
             <span class="ct-headline-line ct-headline-line--left"></span>
-                our brands
+                our clients
             <span class="ct-headline-line ct-headline-line--right"></span>
         </span>
                 </h3>
@@ -531,6 +563,35 @@
                 </section>
             </div>
         </section>
+
+        <!--Testimonials-->
+
+
+<section class="testimonials">
+
+        <div class="testimonials-box">
+            <div class="testimonials-slider">
+
+
+                <div class="slide">
+                    <div class="testimonials-carousel-thumbnail"><img width="120" alt="" src="https://randomuser.me/api/portraits/men/68.jpg" class="img img-responsive img-circle"/></div>
+                    <div class="testimonials-carousel-context">
+                        <div class="testimonials-name">Michael Rocks <span>yahoo.com</span></div>
+                        <div class="testimonials-carousel-content"><p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis. Fusce dapibus, tellus ac cursus commodo.</p></div>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="testimonials-carousel-thumbnail"><img width="120" alt="" src="https://randomuser.me/api/portraits/men/58.jpg" class="img img-responsive img-circle"/></div>
+                    <div class="testimonials-carousel-context">
+                        <div class="testimonials-name">Andrew Bilson <span>dailydesignnotes.com</span></div>
+                        <div class="testimonials-carousel-content"><p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal..</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+        <!--End Testimonials-->
     </main>
 
     <footer>
@@ -564,6 +625,10 @@
 <script src="assets/js/ct-mediaSection/init.js"></script>
 
 <script src="assets/js/headroom/init.js"></script>
+<!-- bxSlider Javascript file -->
+<script src="assets/js/jquery-bxslider/jquery.bxslider.js"></script>
+<!-- bxSlider CSS file -->
+<link href="assets/js/jquery-bxslider/jquery.bxslider.css" rel="stylesheet" />
 
 <script src="assets/js/main.js"></script>
 
@@ -574,7 +639,44 @@
     $('head').append('<link rel="stylesheet" type="text/css" href="demo/generator.css">');
 </script>
 
+<script type="text/javascript">
+    (function($) {
+        "use strict";
+        function count($this){
+            var current = parseInt($this.html(), 10);
+            current = current + 1; /* Where 50 is increment */
+            $this.html(++current);
+            if(current > $this.data('count')){
+                $this.html($this.data('count'));
+            } else {
+                setTimeout(function(){count($this)}, 50);
+            }
+        }
+        $(".stat-count").each(function() {
+            $(this).data('count', parseInt($(this).html(), 10));
+            $(this).html('0');
+            count($(this));
+        });
+    })(jQuery);
+</script>
+<script type="text/javascript">
+    (function($) {
+        "use strict";
+    $('.testimonials-slider').bxSlider({
+        slideWidth: 1024,
+        minSlides: 1,
+        slideHeight:240,
+        maxSlides: 1,
+        slideMargin: 32,
+        auto: true,
+        autoControls: true
+    });
+    })(jQuery);
 
+</script>
+<script type="text/javascript">
+$(".bx-viewport").height(100);
+</script>
 </body>
 
 

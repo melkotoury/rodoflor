@@ -15,8 +15,7 @@ var snapper = new Snap({
     element: document.getElementById('ct-js-wrapper')
 });
 
-$(document).ready(function()
-{
+
     //-START PANNEL AUTOHEIGHT-//
     $("#services").load(function(){
         // Keep all pannel headers on the same height
@@ -43,7 +42,13 @@ $(document).ready(function()
 
     });
     //-END PANNEL AUTOHEIGHT-//
-})
+
+
+
+
+
+
+
 
 /* ========================== */
 /* ==== HELPER FUNCTIONS ==== */
