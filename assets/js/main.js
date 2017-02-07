@@ -15,6 +15,35 @@ var snapper = new Snap({
     element: document.getElementById('ct-js-wrapper')
 });
 
+$(document).ready(function()
+{
+    //-START PANNEL AUTOHEIGHT-//
+    $("#services").load(function(){
+        // Keep all pannel headers on the same height
+
+        var maxPannelHeight = Math.max.apply(null, $(".panel-heading").map(function ()
+        {
+            return $(this).height();
+        }).get());
+        $.each($('.panel-heading'),function(i,v)
+        {
+            $(v).css('height',maxPannelHeight);
+
+        });
+
+        var maxPannelHeight = Math.max.apply(null, $(".panel").map(function ()
+        {
+            return $(this).height();
+        }).get());
+        $.each($('.panel-body'),function(i,v)
+        {
+            $(v).css('height',maxPannelHeight+$(".panel-body").attribute("padding-top"));
+
+        });
+
+    });
+    //-END PANNEL AUTOHEIGHT-//
+})
 
 /* ========================== */
 /* ==== HELPER FUNCTIONS ==== */

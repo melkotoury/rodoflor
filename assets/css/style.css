@@ -44,6 +44,7 @@ Last change:  10 april 2015
 35. Pricing Tables
 36. Progress Bar
 37. Counters
+38. My Customization
 
 
 ------------------------------------------------------------------*/
@@ -8415,10 +8416,10 @@ nav.navbar.navbar--type2 .ct-navbar-container .navbar-form .input-group {
   left: auto;
 }
 .slick-prev:before {
-  content: 'Ã¢â€ Â';
+  content: 'ÃƒÂ¢Ã¢â‚¬Â Ã‚Â';
 }
 [dir='rtl'] .slick-prev:before {
-  content: 'Ã¢â€ â€™';
+  content: 'ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢';
 }
 .slick-next {
   right: -25px;
@@ -8428,10 +8429,10 @@ nav.navbar.navbar--type2 .ct-navbar-container .navbar-form .input-group {
   left: -25px;
 }
 .slick-next:before {
-  content: 'Ã¢â€ â€™';
+  content: 'ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢';
 }
 [dir='rtl'] .slick-next:before {
-  content: 'Ã¢â€ Â';
+  content: 'ÃƒÂ¢Ã¢â‚¬Â Ã‚Â';
 }
 /* Dots */
 .slick-dots {
@@ -8482,7 +8483,7 @@ nav.navbar.navbar--type2 .ct-navbar-container .navbar-form .input-group {
   left: 0;
   width: 20px;
   height: 20px;
-  content: 'Ã¢â‚¬Â¢';
+  content: 'ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢';
   text-align: center;
   opacity: .25;
   color: black;
@@ -10838,7 +10839,7 @@ form [disabled] .checkbox input[type=radio] + label:before {
   position: relative;
 }
 .ct-gallery-filters .ct-gallery-filters-list li {
-  margin-left: 9.9%;
+  margin-left: 5%;
   padding: 0;
 }
 .ct-gallery-filters .ct-gallery-filters-list li:first-child {
@@ -13356,3 +13357,98 @@ body.boxed #ct-js-wrapper .ct-mainHeader .navbar.navbar-default,
   position: absolute;
   right: 0;
 }
+/*------------------------ My Customizations -----------------------------*/
+@import url(https://fonts.googleapis.com/css?family=Spinnaker);
+@import url(https://fonts.googleapis.com/css?family=Jura);
+
+#services h1
+{
+  font-family: 'Jura';
+  padding-bottom:42px ;
+  font-size:62px;
+  color:#0e3863;
+}
+.panel,.panel-heading,.panel-default,.panel-body
+{
+  border:none !important;
+}
+.panel
+{
+  font-size:14px;
+}
+.panel *
+{
+  color:#fff;
+}
+.panel-heading
+{
+  font-family: 'Jura', Georgia, Times, serif;
+  padding-top:32px !important ;
+}
+.panel-body
+{
+  padding-top:48px !important ;
+  font-family: 'Spinnaker';
+  font-size:14px;
+  text-justify:auto ;
+
+}
+/* Panel1*/
+.panel-col-1 .panel-heading,.panel-col-1 .panel-body
+{
+  background-color:#002A66   !important;
+  border-color:#002A66   !important;
+}
+
+/* Panel2*/
+.panel-col-2 .panel-heading,.panel-col-2 .panel-body
+{
+  background-color:#66002A !important;
+  border-color:#66002A   !important;
+}
+
+/* Panel3*/
+.panel-col-3 .panel-heading,.panel-col-3 .panel-body
+{
+  background-color:#166600   !important;
+  border-color:#166600   !important;
+}
+
+/* Panel4*/
+.panel-col-4 .panel-heading,.panel-col-4 .panel-body
+{
+  background-color:#665000  !important;
+  border-color:#665000   !important;
+}
+
+.panel-col-1 .panel,
+.panel-col-2 .panel,
+.panel-col-3 .panel,
+.panel-col-4 .panel
+{
+  padding:20px !important;
+  -webkit-transition: all 0.7s ease            !important;
+  -moz-transition: all 0.7s ease !important;
+  -o-transition: all 0.7s ease !important;
+  transition: all 0.7s ease !important;
+}
+.panel-col-1 .panel,
+.panel-col-2 .panel,
+.panel-col-3 .panel,
+.panel-col-4 .panel
+{
+  -webkit-box-shadow: -2px 6px 10px 3px rgba(0,0,0,0.45);
+  -moz-box-shadow: -2px 6px 10px 3px rgba(0,0,0,0.45);
+  box-shadow: -2px 6px 10px 3px rgba(0,0,0,0.45);
+}
+.panel-col-1 .panel:hover,
+.panel-col-2 .panel:hover,
+.panel-col-3 .panel:hover,
+.panel-col-4 .panel:hover
+{
+  -webkit-filter: saturate(2.5);
+
+}
+
+
+
